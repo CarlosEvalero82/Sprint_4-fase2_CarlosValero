@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Past Events</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="shortcut icon"
+      href="imagenes_eventos/favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Encabezado de la página que incluye la barra de navegación -->
+    <header>
+      <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+          <a class="navbar-brand" href="index.html">
+            <img src="imagenes_eventos/amazing_brand.png" width="120" class="logoheader" alt="logoheader">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
+            <ul class="navbar-nav d-flex align-items-center">
+              <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="upcoming_events.html">UPCOMING EVENTS</a></li>
+              <li class="nav-item"><a class="nav-link" href="past_events.html">PAST EVENTS</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+              <li class="nav-item"><a class="nav-link" href="stats.html">STATS</a></li>
+              <li class="nav-item"><a class="nav-link" href="details.html">DETAILS</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>      
+    </header>
+
+    <main class="main">
+      <!-- Contenedor para los filtros de búsqueda y las tarjetas de eventos -->
+      <div class="container-fluid mt-4">
+        <div class="row mb-3 align-items-center">
+          <!-- Columna para los filtros de categorías -->
+          <div
+            class="col-md-8 d-flex align-items-center"
+            id="filters-container"
+          >
+            <!-- Filtros de categorías con checkboxes -->
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="category1"
+                value="Food Fair"
+                data-category="Food Fair"
+              />
+              <label class="form-check-label" for="category1">Food Fair</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="category2"
+                value="Museum"
+                data-category="Museum"
+              />
+              <label class="form-check-label" for="category2">Museum</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="category3"
+                value="Costume Party"
+                data-category="Costume Party"
+              />
+              <label class="form-check-label" for="category3"
+                >Costume Party</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="category4"
+                value="Music Concert"
+                data-category="Music Concert"
+              />
+              <label class="form-check-label" for="category4"
+                >Music Concert</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="category5"
+                value="Race"
+                data-category="Race"
+              />
+              <label class="form-check-label" for="category5">Race</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="category6"
+                value="Book Exchange"
+                data-category="Book Exchange"
+              />
+              <label class="form-check-label" for="category6"
+                >Book Exchange</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="category7"
+                value="Cinema"
+                data-category="Cinema"
+              />
+              <label class="form-check-label" for="category7">Cinema</label>
+            </div>
+          </div>
+          <!-- Columna para el formulario de búsqueda -->
+          <div
+            class="col-md-4 d-flex justify-content-end align-items-center"
+            id="search-container"
+          >
+            <form id="search-form" class="d-flex">
+              <!-- Campo de entrada para la búsqueda -->
+              <input
+                class="form-control me-2"
+                type="search"
+                id="search-input"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <!-- Botón de envío del formulario de búsqueda -->
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenedor para las tarjetas de eventos -->
+      <div class="container-fluid d-flex flex-wrap" id="events-container">
+        <div
+          class="card m-1"
+          onclick="showEventDetails('639c723b992482e5f2834be9')"
+        >
+          <img
+            src="https://i.postimg.cc/Fs03hQDt/Collectivities-Party.jpg"
+            class="card-img-top"
+            alt="Collectivities Party"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Collectivities Party</h5>
+            <p class="card-text">
+              Enjoy your favourite dishes, from different countries, in a unique
+              event for the whole family.
+            </p>
+            <a href="javascript:void(0)" class="btn btn-primary">More Info</a>
+          </div>
+        </div>
+
+        <div
+          class="card m-1"
+          onclick="showEventDetails('639c723b992482e5f2834beb')"
+        >
+          <img
+            src="https://i.postimg.cc/ZmD3Xf57/Korean-style.jpg"
+            class="card-img-top"
+            alt="Korean style"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Korean style</h5>
+            <p class="card-text">
+              Enjoy the best Korean dishes, with international chefs and awesome
+              events.
+            </p>
+            <a href="javascript:void(0)" class="btn btn-primary">More Info</a>
+          </div>
+        </div>
+
+        <div
+          class="card m-1"
+          onclick="showEventDetails('639c723c992482e5f2834bed')"
+        >
+          <img
+            src="https://i.postimg.cc/GmHRkbNV/Jurassic-Park.jpg"
+            class="card-img-top"
+            alt="Jurassic Park"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Jurassic Park</h5>
+            <p class="card-text">
+              Let's go meet the biggest dinosaurs in the paleontology museum.
+            </p>
+            <a href="javascript:void(0)" class="btn btn-primary">More Info</a>
+          </div>
+        </div>
+
+        <div
+          class="card m-1"
+          onclick="showEventDetails('639c723c992482e5f2834bef')"
+        >
+          <img
+            src="https://i.postimg.cc/c4C2zXm8/Parisian-Museum.jpg"
+            class="card-img-top"
+            alt="Parisian Museum"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Parisian Museum</h5>
+            <p class="card-text">
+              Come to the most fascinating art museum in Paris and admire the
+              best exhibitions.
+            </p>
+            <a href="javascript:void(0)" class="btn btn-primary">More Info</a>
+          </div>
+        </div>
+
+        <div
+          class="card m-1"
+          onclick="showEventDetails('639c723c992482e5f2834bf0')"
+        >
+          <img
+            src="https://i.postimg.cc/XvP6t6ch/Comicon.jpg"
+            class="card-img-top"
+            alt="Comicon"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Comicon</h5>
+            <p class="card-text">
+              Enjoy all the best comic events, from movies to comics.
+            </p>
+            <a href="javascript:void(0)" class="btn btn-primary">More Info</a>
+          </div>
+        </div>
+
+        <div
+          class="card m-1"
+          onclick="showEventDetails('639c723c992482e5f2834bf1')"
+        >
+          <img
+            src="https://i.postimg.cc/Z5L4N9q2/Electronic-Fest.jpg"
+            class="card-img-top"
+            alt="Electronic Fest"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Electronic Fest</h5>
+            <p class="card-text">
+              Enjoy the best electronic music from the biggest DJs in the world.
+            </p>
+            <a href="javascript:void(0)" class="btn btn-primary">More Info</a>
+          </div>
+        </div>
+
+        <div
+          class="card m-1"
+          onclick="showEventDetails('639c723c992482e5f2834bf2')"
+        >
+          <img
+            src="https://i.postimg.cc/2S06ybf1/10k-for-Life.jpg"
+            class="card-img-top"
+            alt="10k for Life"
+          />
+          <div class="card-body">
+            <h5 class="card-title">10k for Life</h5>
+            <p class="card-text">
+              Join our 10k race and help to support the fight against cancer.
+            </p>
+            <a href="javascript:void(0)" class="btn btn-primary">More Info</a>
+          </div>
+        </div>
+
+        <div
+          class="card m-1"
+          onclick="showEventDetails('639c723c992482e5f2834bf3')"
+        >
+          <img
+            src="https://i.postimg.cc/8C2Yp2Tp/Just-for-Your-Kitchen.jpg"
+            class="card-img-top"
+            alt="Just for Your Kitchen"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Just for Your Kitchen</h5>
+            <p class="card-text">
+              Enjoy the best kitchen gadgets and accessories at great prices.
+            </p>
+            <a href="javascript:void(0)" class="btn btn-primary">More Info</a>
+          </div>
+        </div>
+
+        <div
+          class="card m-1"
+          onclick="showEventDetails('639c723c992482e5f2834bf4')"
+        >
+          <img
+            src="https://i.postimg.cc/W4fTbQ2C/Batman.jpg"
+            class="card-img-top"
+            alt="Batman"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Batman</h5>
+            <p class="card-text">
+              Meet the most famous superhero in Gotham City and enjoy exciting
+              events.
+            </p>
+            <a href="javascript:void(0)" class="btn btn-primary">More Info</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="custom-footer mt-4">
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <a href="#" class="footer-icon"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="footer-icon"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="col-12 col-md-6 text-center text-md-end">
+            <p class="mb-0">&copy; 2024 Amazing Events. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts de JavaScript -->
+    <script src="Past_Events.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz4fnFO9fOj8ciBKUW02cJz3tDiKjueTxda2WENeN4XZKtZyK3z4bhm20f"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-DBQ0jllWiwEZ7W32g7gji2T0jz1yC7g9F86mckS7A2/kaRxF7Jj0sDkz72D6h4+9"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

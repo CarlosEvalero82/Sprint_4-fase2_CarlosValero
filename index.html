@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazing Events - Home</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="shortcut icon"
+      href="imagenes_eventos/favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Encabezado de la página -->
+    <header>
+      <!-- Barra de navegación utilizando Bootstrap -->
+      <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+          <a class="navbar-brand" href="index.html">
+            <img src="imagenes_eventos/amazing_brand.png" width="120" class="logoheader" alt="logoheader">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
+            <ul class="navbar-nav d-flex align-items-center">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">HOME</a></li>
+              <li class="nav-item"><a class="nav-link" href="upcoming_events.html">UPCOMING EVENTS</a></li>
+              <li class="nav-item"><a class="nav-link" href="past_events.html">PAST EVENTS</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+              <li class="nav-item"><a class="nav-link" href="stats.html">STATS</a></li>
+              <li class="nav-item"><a class="nav-link" href="details.html">DETAILS</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main class="main">
+      <!-- Carrusel de Bootstrap para mostrar imágenes deslizables -->
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <!-- Indicadores del carrusel para navegar entre las diapositivas -->
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+            class="active"
+            aria-current="true"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+        </div>
+        <!-- Contenido del carrusel -->
+        <div class="carousel-inner">
+          <!-- Elementos del carrusel -->
+          <div class="carousel-item">
+            <img
+              src="imagenes_eventos/optional_banner_1.jpg"
+              class="d-block w-100 custom-carousel-image"
+              alt="banner1"
+            />
+            <div class="carousel-caption d-none d-md-block"><h3>HOME</h3></div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="imagenes_eventos/optional_banner_2.jpg"
+              class="d-block w-100 custom-carousel-image"
+              alt="banner2"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>UPCOMING EVENTS</h3>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="imagenes_eventos/optional_banner_3.jpg"
+              class="d-block w-100 custom-carousel-image"
+              alt="banner3"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>PAST EVENTS</h3>
+            </div>
+          </div>
+          <div class="carousel-item active">
+            <img
+              src="./imagenes_eventos/Banner_4.jpg"
+              class="d-block w-100 custom-carousel-image"
+              alt="banner4"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>CONTACT</h3>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="imagenes_eventos/optional_banner_5.jpg"
+              class="d-block w-100 custom-carousel-image"
+              alt="banner5"
+            />
+            <div class="carousel-caption d-none d-md-block"><h3>STATS</h3></div>
+          </div>
+        </div>
+        <!-- Controles para navegar entre las diapositivas del carrusel -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Contenedor de filtros y búsqueda -->
+      <div class="container-fluid mt-4">
+        <div class="row mb-3 align-items-center">
+          <div
+            class="col-md-8 d-flex align-items-center"
+            id="filters-container"
+          ></div>
+          <!-- Contenedor para filtros de búsqueda, inicialmente vacío -->
+          <div
+            class="col-md-4 d-flex justify-content-end align-items-center"
+            id="search-container"
+          >
+            <!-- Contenedor para el formulario de búsqueda, alineado a la derecha -->
+            <!-- Formulario de búsqueda -->
+            <form id="search-form" class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                id="search-input"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <!-- Campo de entrada de texto para la búsqueda -->
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+              <!-- Botón para enviar la búsqueda -->
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenedor de tarjetas de eventos -->
+      <div class="container-fluid d-flex flex-wrap" id="events-container">
+        <!-- Contenedor fluido que permite el uso de flexbox para distribuir las tarjetas -->
+        <!-- Ejemplo de una tarjeta de evento -->
+        <div class="card" style="width: 18rem; margin: 10px">
+          <!-- Tarjeta de evento con ancho fijo y margen -->
+          <img
+            src="event_image1.jpg"
+            class="card-img-top"
+            alt="Event Image 1"
+          />
+          <!-- Imagen en la parte superior de la tarjeta -->
+          <div class="card-body">
+            <!-- Cuerpo de la tarjeta -->
+            <h5 class="card-title">Event Name 1</h5>
+            <!-- Título del evento -->
+            <p class="card-text">Description for event 1.</p>
+            <!-- Descripción del evento -->
+            <!-- Enlace para ver detalles -->
+            <a href="details.html?id=1" class="btn btn-primary">View Details</a>
+            <!-- Botón para ver más detalles del evento -->
+          </div>
+        </div>
+
+        <!-- Otro ejemplo de tarjeta de evento -->
+        <div class="card" style="width: 18rem; margin: 10px">
+          <!-- Otra tarjeta de evento -->
+          <img
+            src="event_image2.jpg"
+            class="card-img-top"
+            alt="Event Image 2"
+          />
+          <!-- Imagen de la tarjeta -->
+          <div class="card-body">
+            <h5 class="card-title">Event Name 2</h5>
+            <!-- Título del evento -->
+            <p class="card-text">Description for event 2.</p>
+            <!-- Descripción del evento -->
+            <!-- Enlace para ver detalles -->
+            <a href="details.html?id=2" class="btn btn-primary">View Details</a>
+            <!-- Botón para ver más detalles del evento -->
+          </div>
+        </div>
+
+        <!-- Ejemplos de tarjetas dinámicas de eventos -->
+        <!-- Reemplazar ${event._id} por el identificador dinámico correspondiente en la programación real -->
+        <div class="card" style="width: 18rem; margin: 10px">
+          <img
+            src="event_image3.jpg"
+            class="card-img-top"
+            alt="Event Image 3"
+          />
+          <!-- Imagen del evento -->
+          <div class="card-body">
+            <h5 class="card-title">Event Name 3</h5>
+            <!-- Título del evento -->
+            <p class="card-text">Description for event 3.</p>
+            <!-- Descripción del evento -->
+            <a href="details.html?id=${event._id}" class="btn btn-primary"
+              >View Details</a
+            >
+            <!-- Botón para ver detalles con un identificador dinámico -->
+          </div>
+        </div>
+
+        <!-- Puedes agregar más tarjetas de eventos aquí -->
+      </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="custom-footer mt-4">
+      <!-- Pie de página con un margen superior -->
+      <div class="container py-4">
+        <!-- Contenedor con padding vertical -->
+        <div class="row">
+          <!-- Enlaces a redes sociales en el pie de página -->
+          <div class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <a href="#" class="footer-icon"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <!-- Icono de Facebook -->
+            <a href="#" class="footer-icon"><i class="fab fa-whatsapp"></i></a>
+            <!-- Icono de WhatsApp -->
+            <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+            <!-- Icono de Instagram -->
+          </div>
+          <!-- Derechos de autor -->
+          <div class="col-12 col-md-6 text-center text-md-end">
+            <p class="mb-0">&copy; 2024 Amazing Events. All rights reserved.</p>
+            <!-- Texto de derechos de autor -->
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Enlaces a archivos JavaScript -->
+    <script src="index.js"></script>
+    <!-- Archivo JavaScript personalizado -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script de Bootstrap para funcionalidades JavaScript -->
+  </body>
+</html>
